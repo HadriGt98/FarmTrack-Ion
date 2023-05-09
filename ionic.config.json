@@ -1,0 +1,7 @@
+{
+  "name": "FarmTrack-Ion",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
