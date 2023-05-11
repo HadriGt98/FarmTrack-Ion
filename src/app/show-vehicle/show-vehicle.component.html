@@ -1,0 +1,50 @@
+<app-header [previousPage]="previousPage"></app-header>
+<div>
+    <h2>{{ vehicle.model_make }}</h2>
+</div>
+<div>
+    <button *ngIf="isAdmin()" class="button" routerLink="/edit-vehicle/{{ vehicle.vehicle_id }}">Edit</button>
+</div>
+<div>
+    <mat-card>
+        <mat-card-content class="card-content">
+            <div class="card-column secondary">
+                <p>Fuel expenses</p><br>
+                <p class="stat">{{ stats.total_fuel_cost }}</p>
+            </div>
+            <div class="card-column">
+                <p>Minutes used</p><br><br>
+                <p class="stat-main">{{ stats.total_minutes }}</p>
+            </div>
+            <div class="card-column secondary">
+                <p>Maintenance expenses</p><br>
+                <p class="stat">{{ stats.total_maintenance_cost }}</p>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+<div>
+    <h2>Usages</h2><br>
+    <button class="button" routerLink="/new-usage">Add a usage</button>
+</div>
+
+<div class="container">
+    <div class="head">
+        <div>Date</div>
+        <div>Duration</div>
+        <div>Fuel</div>
+        <div>Maintenance</div>
+        <div>Note</div>
+    </div>
+    <div *ngFor="let usage of usages">
+        <mat-card class="usage" (click)="isAdmin() && seeUsage(usage.usage_id)">
+            <mat-card-content class="head">
+                <div>{{ usage.date }}</div>
+                <div>{{ usage.duration }}</div>
+                <div>{{ usage.fuel_amount }}</div>
+                <div>{{ usage.maintenance_cost }}</div>
+                <div class="note">{{ usage.note }}</div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+h1 {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: Bold;
+    color: #030303;
+    margin: 0;
+    letter-spacing: 5px;
+    cursor: pointer;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px;
+    box-shadow: 0px 10px 10px 1px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff00;
+}
+
+span {
+    cursor: pointer;
+}
+
+
+.material-symbols-outlined {
+    color: rgba(3,3,3,0.72);
+}

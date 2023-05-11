@@ -1,0 +1,39 @@
+<app-header [previousPage]="previousPage"></app-header>
+<div class="center">
+  <h2>All vehicles</h2>
+</div>
+
+<div class="center">
+  <input type="text" class="form-control" placeholder="Enter a make or a model" [(ngModel)]="searchText" (input)="searchVehicles()">
+</div>
+
+<ion-content>
+<div class="content center">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div
+    fxFlex="33%" 
+    fxFlex.xs="100%"
+    fxFlex.sm="33%"
+    *ngIf="isAdmin()">
+        <ion-card class="add" routerLink="/new-vehicle">
+          <ion-card-content>
+            <span class="material-symbols-outlined">add_circle</span>
+          </ion-card-content>
+        </ion-card>
+    </div>
+    <div 
+      fxFlex="33%" 
+      fxFlex.xs="100%"
+      fxFlex.sm="33%"
+      *ngFor="let vehicle of vehicles">
+      <mat-card routerLink="/show-vehicle/{{ vehicle.vehicle_id }}">
+        <mat-card-content>
+          <h3>{{ vehicle.nickname }}</h3>
+          <p>{{ vehicle.model_make }}</p>
+          <p>{{ vehicle.type }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+</ion-content>

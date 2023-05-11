@@ -1,0 +1,76 @@
+.button {
+    background: #030303;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 3px 24px;
+    text-decoration: none;
+    outline: 0;
+}
+
+.button.register {
+    background: rgba(3,3,3,0.74);
+}
+
+.title {
+    font-family: 'Montserrat';
+    font-size: 37px;
+    font-weight: Bold;
+    color: #030303;
+    margin: 0;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding: 4px 10px;
+    /* margin: 10px; */
+    width: 50%;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.45);
+    background-color: #ffffff;
+    color: #030303;
+}
+
+div {
+    margin-bottom: 20px;
+    /* border: solid 1px #000000; */
+    margin: auto;
+    width: 75%;
+    max-width: 700px;
+    padding: 15px 15px;
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    text-align: left;
+    font-size: 18px;
+    color: #030303;
+}
+
+.center-vert {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+p {
+    margin: 12px;
+    font-size: 18px;
+    color: #030303;
+}
+
+.error {
+    color: red;
+    font-size: 18px;
+}

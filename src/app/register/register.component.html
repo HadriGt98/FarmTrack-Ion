@@ -1,0 +1,35 @@
+<div></div>
+<div>
+    <h1 class="title">Join us!</h1><br>
+    <p>- Become a farmtracker today -</p>    
+</div>
+
+<div>
+    <form [formGroup]="registerform" (ngSubmit)="submitRegistration()">
+        <div>
+            <label>Username</label>
+            <input class="inputbox" formControlName="username">
+        </div>
+        <div>
+            <label>First name</label>
+            <input class="inputbox" formControlName="first_name">
+        </div>
+        <div>
+            <label>Last name</label>
+            <input class="inputbox" formControlName="last_name">
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" class="inputbox" formControlName="password">
+        </div>
+        <!-- <div>
+            <input matInput placeholder="Confirm Password" formControlName="confirmPassword">
+        </div> -->
+        <div class="error" *ngIf="errorMessage">{{errorMessage}}</div><br>
+        <div class="submit">
+            <button class="button register" type="submit">Create my account</button>
+            <button class="button" routerLink="/login">Cancel</button>
+        </div>
+    </form>
+</div>
+

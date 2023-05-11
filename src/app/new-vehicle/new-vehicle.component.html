@@ -1,0 +1,29 @@
+<app-header [previousPage]="previousPage"></app-header>
+<div>
+  <h2>New vehicle</h2>
+</div>
+
+<div>
+  <form [formGroup]="vehicleForm" (ngSubmit)="submitVehicle()">  
+    <div class="form">
+      <label for="model_make">Make and model*</label>
+      <input type="text" id="model_make" name="model_make" placeholder="Please enter a make and model" formControlName="model_make">
+    </div>
+    <div class="form">
+      <label for="nickname">Nickname</label>
+      <input type="text" id="nickname" name="nickname" placeholder="Please enter a nickname" formControlName="nickname">
+    </div>
+    <div class="form">
+      <label for="type">Type*</label>
+      <select name="type" id="type" formControlName="type">
+          <option value="" disabled selected>- Please choose -</option>
+          <option *ngFor="let vehicle of vehicles" [value]="vehicle">{{vehicle}}</option>
+      </select>
+    </div>
+    <div class="error" *ngIf="errorMessage">{{errorMessage}}</div><br>
+    <div class="submit">
+      <button class="button save" type="submit">Save</button>
+      <button class="button" routerLink="/vehicle-list">Cancel</button>
+    </div>
+  </form>
+</div>
