@@ -31,7 +31,7 @@ input {
     outline: none;
     padding: 4px 10px;
     /* margin: 10px; */
-    width: 50%;
+    width: 90%;
     font-size: 18px;
     font-family: 'Montserrat';
     box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.45);
@@ -40,11 +40,11 @@ input {
 }
 
 div {
-    margin-bottom: 20px;
-    /* border: solid 1px #000000; */
-    margin: auto;
-    width: 75%;
-    max-width: 700px;
+    // margin-bottom: 20px;
+    border: solid 1px #000000;
+    margin: auto ;
+    width: 90%;
+    // max-width: 700px;
     padding: 15px 15px;
     text-align: center;
 }
@@ -55,13 +55,6 @@ label {
     text-align: left;
     font-size: 18px;
     color: #030303;
-}
-
-.center-vert {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 p {

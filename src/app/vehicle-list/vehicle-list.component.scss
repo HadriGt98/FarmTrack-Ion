@@ -66,16 +66,17 @@ mat-card:hover {
 
 div {
     margin-bottom: 20px;
-    /* border: solid 1px #000000; */
+    border: solid 1px #000000;
     width: 100%;
     max-width: 700px;
     padding: 15px 15px;
     text-align: center;
-    
+    display: flex;
 }
 
 div.center {
     margin: auto;
+    display: inline-block;
 }
 
 h2 {
@@ -90,6 +91,19 @@ div.content {
     padding: 14px;
 }
 
-input[type='text'] {
-    text-align: justify;
-    }
+p, h3 {
+    color:#030303
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: #ffffff;
+    font-family: 'Montserrat';
+    font-size: 15px;
+    font-weight: lighter;
+    color: #030303;
+    padding: 5px 0px;
+    border-bottom: solid 1px #030303;
+    width: 100%;
+}

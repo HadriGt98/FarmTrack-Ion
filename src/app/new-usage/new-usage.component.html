@@ -1,35 +1,29 @@
 <app-header [previousPage]="previousPage"></app-header>
-<div>
-  <h2>New usage</h2>
-</div>
 
 <div>
+  <div>
+    <h2>New usage</h2>
+  </div>
   <form [formGroup]="usageForm" (ngSubmit)="submitUsage()">
     <div class="form">
-      <label for="vehicle_id">Vehicle*</label>
       <select name="vehicle_id" id="vehicle_id" formControlName="vehicle_id">
           <option value="" disabled selected>- Please choose -</option>
           <option *ngFor="let vehicle of vehicles" [value]="vehicle.vehicle_id">{{vehicle.model_make}}</option>
       </select>
     </div>
     <div class="form">
-      <label for="duration">Duration*</label>
-      <input type="number" id="duration" name="duration" placeholder="Minutes" formControlName="duration">
+      <input type="number" id="duration" name="duration" placeholder="Duration" formControlName="duration">
     </div>
     <div class="form">
-      <label for="date">Date*</label>
       <input type="date" id="date" name="date" formControlName="date">
     </div>
     <div class="form">
-      <label for="fuel_amount">Fuel amount*</label>
-      <input type="number" id="fuel_amount" name="fuel_amount" placeholder="in EUR" formControlName="fuel_amount">
+      <input type="number" id="fuel_amount" name="fuel_amount" placeholder="Fuel costs" formControlName="fuel_amount">
     </div>
     <div class="form">
-      <label for="maintenance_cost">Maintenance amount*</label>
-      <input type="number" id="maintenance_cost" name="maintenance_cost" placeholder="in EUR" formControlName="maintenance_cost">
+      <input type="number" id="maintenance_cost" name="maintenance_cost" placeholder="Maintenance costs" formControlName="maintenance_cost">
     </div>
     <div class="form">
-      <label for="note">Note</label>
       <input type="text" id="note" name="note" placeholder="Add a short note!" formControlName="note" contenteditable>
     </div>
     <div class="error" *ngIf="errorMessage">{{errorMessage}}</div><br>
@@ -39,4 +33,5 @@
     </div>  
   </form>
 </div>
+<div></div>
 

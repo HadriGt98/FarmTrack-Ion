@@ -11,20 +11,14 @@
 <div class="content center">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <div
-    fxFlex="33%" 
-    fxFlex.xs="100%"
-    fxFlex.sm="33%"
     *ngIf="isAdmin()">
-        <ion-card class="add" routerLink="/new-vehicle">
-          <ion-card-content>
+        <mat-card class="add" routerLink="/new-vehicle">
+          <mat-card-content>
             <span class="material-symbols-outlined">add_circle</span>
-          </ion-card-content>
-        </ion-card>
+          </mat-card-content>
+        </mat-card>
     </div>
     <div 
-      fxFlex="33%" 
-      fxFlex.xs="100%"
-      fxFlex.sm="33%"
       *ngFor="let vehicle of vehicles">
       <mat-card routerLink="/show-vehicle/{{ vehicle.vehicle_id }}">
         <mat-card-content>
@@ -37,3 +31,7 @@
   </div>
 </div>
 </ion-content>
+
+<!-- fxFlex="33%" 
+fxFlex.xs="100%"
+fxFlex.sm="33%" -->
