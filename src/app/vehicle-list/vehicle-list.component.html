@@ -9,7 +9,7 @@
 
 <ion-content>
 <div class="content center">
-  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+  <!-- <div fxLayout="row wrap" fxLayoutGap="16px grid"> -->
     <div
     *ngIf="isAdmin()">
         <mat-card class="add" routerLink="/new-vehicle">
@@ -18,8 +18,7 @@
           </mat-card-content>
         </mat-card>
     </div>
-    <div 
-      *ngFor="let vehicle of vehicles">
+    <div *ngFor="let vehicle of vehicles" class="center">
       <mat-card routerLink="/show-vehicle/{{ vehicle.vehicle_id }}">
         <mat-card-content>
           <h3>{{ vehicle.nickname }}</h3>
@@ -28,7 +27,7 @@
         </mat-card-content>
       </mat-card>
     </div>
-  </div>
+  <!-- </div> -->
 </div>
 </ion-content>
 

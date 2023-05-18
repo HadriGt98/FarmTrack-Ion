@@ -5,6 +5,7 @@ div {
     padding: 15px 15px;
     text-align: center;
     margin: auto;
+    color: #030303
 }
 
 h2 {
@@ -30,7 +31,7 @@ mat-card {
 }
 
 .card-content {
-    display: flex;
+    // display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -38,7 +39,7 @@ mat-card {
 
 .card-column {
     flex: 1;
-    margin-right: 10px;
+    // margin-right: 10px;
     background-color: #ffffff00;
     height: 80px;
     padding: 0px 0px 15px 15px;
@@ -103,3 +104,7 @@ mat-card {
 .note:hover {
     overflow: visible;
   }
+
+p {
+    color: #030303 
+}

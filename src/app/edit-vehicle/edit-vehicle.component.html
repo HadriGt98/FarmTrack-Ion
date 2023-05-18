@@ -1,20 +1,15 @@
 <app-header [previousPage]="previousPage"></app-header>
-<div>
-  <h2>{{ this.vehicle.model_make }} - Edit vehicle</h2>
-</div>
 
 <div>
+  <h2>{{ this.vehicle.model_make }} - Edit vehicle</h2><br>
   <form [formGroup]="updateVehicleForm" (ngSubmit)="submitVehicleUpdate()">  
     <div class="form">
-      <label for="model_make">Make and model*</label>
       <input type="text" id="model_make" name="model_make" formControlName="model_make">
     </div>
     <div class="form">
-      <label for="nickname">Nickname</label>
       <input type="text" id="nickname" name="nickname" formControlName="nickname">
     </div>
     <div class="form">
-      <label for="type">Type</label>
       <select name="type" id="type" formControlName="type">
         <option *ngFor="let vehicle_type of types_of_vehicles" [value]="vehicle_type">{{vehicle_type}}</option>
       </select>
@@ -29,3 +24,4 @@
     </div>
   </form>
 </div>
+<div></div>
