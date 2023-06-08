@@ -3,9 +3,19 @@
   <h2>All vehicles</h2>
 </div>
 
-<div class="center">
+<!-- <div class="center">
   <input type="text" class="form-control" placeholder="Enter a make or a model" [(ngModel)]="searchText" (input)="searchVehicles()">
+</div> -->
+
+<!-- THIS CODE FOR API SEARCH - Check code below -->
+<div class="center">
+  <input type="text" class="form-control" placeholder="Enter a make or a model" [(ngModel)]="searchText" (keyup)="onKeyUp($event)">
 </div>
+
+<!-- THIS CODE FOR FILTERING - Check code below -->
+<!-- <div class="center">
+  <input type="text" class="form-control" placeholder="Enter a make or a model" [(ngModel)]="searchText" (keyup)="onKeyUpFilter($event)">
+</div> -->
 
 <ion-content>
 <div class="content center">
@@ -18,6 +28,26 @@
           </mat-card-content>
         </mat-card>
     </div>
+    <!-- <div *ngFor="let vehicle of vehicles" class="center">
+      <mat-card routerLink="/show-vehicle/{{ vehicle.vehicle_id }}">
+        <mat-card-content>
+          <h3>{{ vehicle.nickname }}</h3>
+          <p>{{ vehicle.model_make }}</p>
+          <p>{{ vehicle.type }}</p>
+        </mat-card-content>
+      </mat-card>
+    </div> -->
+
+    <!-- THIS CODE FOR API SEARCH - Check search bar above -->
+    <div *ngIf="displayNoResultsMessage" class="no-results">
+      <mat-card>
+        <mat-card-content>
+          <h3 >Sorry</h3>
+          <p>No result found</p>
+          <p>Try another search!</p>
+        </mat-card-content>
+      </mat-card>
+    </div> 
     <div *ngFor="let vehicle of vehicles" class="center">
       <mat-card routerLink="/show-vehicle/{{ vehicle.vehicle_id }}">
         <mat-card-content>
@@ -27,6 +57,28 @@
         </mat-card-content>
       </mat-card>
     </div>
+
+    <!-- THIS CODE FOR FILTERING - Check search bar above -->
+    <!-- <div *ngIf="filteredVehicles.length === 1 && filteredVehicles[0].noResult" class="no-results">
+      <mat-card>
+        <mat-card-content>
+          <h3>Sorry</h3>
+          <p>No result found</p>
+          <p>Try another search!</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div *ngFor="let vehicle of filteredVehicles">
+      <ng-container *ngIf="!vehicle.noResult">
+        <mat-card routerLink="/show-vehicle/{{ vehicle.vehicle_id }}">
+          <mat-card-content>
+            <h3>{{ vehicle.nickname }}</h3>
+            <p>{{ vehicle.model_make }}</p>
+            <p>{{ vehicle.type }}</p>
+          </mat-card-content>
+        </mat-card>
+      </ng-container>
+    </div> -->
   <!-- </div> -->
 </div>
 </ion-content>

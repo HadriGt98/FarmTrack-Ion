@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 })
 export class UsageService {
 
-  baseUrl = 'http://localhost:3000/api/';
+  baseUrl = 'http://pat.infolab.ecam.be:60841/api/';
+  // baseUrl = 'http://localhost:3000/api/';
 
   constructor( private http: HttpClient, private router:Router, private jwtHelper:JwtHelperService ) { }
 
